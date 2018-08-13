@@ -68,7 +68,7 @@ public class ButtonListener implements ActionListener {
 		JButton addArt = new JButton("+");
 		JButton submit = new JButton("Submit");
 		
-		int py = 220; //setting the size of the panel, the height is a variable because it is used later when updating teh panel size when additional textfields are added
+		int py = 220; //setting the size of the panel, the height is a variable because it is used later when updating the panel size when additional textfields are added
 		asPanel.setPreferredSize(new Dimension(400, py));
 		
 		//adding all components to panel
@@ -132,7 +132,8 @@ public class ButtonListener implements ActionListener {
 		});
 		
 		//add listener to the submit button
-		submit.addActionListener(new AddListener(monthBox, dayBox, yearBox, venText, tfList));
+		//type is a string that will be use to determine whether the event being added is a show or a festival
+		submit.addActionListener(new AddListener(monthBox, dayBox, yearBox, venText, tfList, "show", asF));
 		
 		//add panel to frame, set frame size, set visible 
 		asF.add(asPanel);
